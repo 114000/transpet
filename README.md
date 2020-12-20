@@ -1,2 +1,5 @@
-# transpet
-a browser plugin for processing data and keeping pets
+### Boilerplate
+
+<https://github.com/tjx666/awesome-chrome-extension-boilerplate>
+
+### Note

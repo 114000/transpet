@@ -1,0 +1,41 @@
+:root {
+  --transpet-playground-width: 600px;
+}
+
+.transpet-playground {
+  position: fixed;
+  right: 0px;
+  top: 0px !important;
+  bottom: 0px !important;
+  width: var(--transpet-playground-width);
+  background-color: #fff;
+  z-index: 10000001;
+  border-left: 1px solid #eee;
+  transition: transform 0.2s ease 0s;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.transpet-resize-bar {
+  position: absolute;
+  left: -4px;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: col-resize;
+}
+
+
+
+.transpet-playground__active {
+  transform: translateX(0);
+}
+
+.transpet-pg-container {
+  flex: 1;
+}
+
+.transpet-pg-header {}
+.transpet-pg-footer {}

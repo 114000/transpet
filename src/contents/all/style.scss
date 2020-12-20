@@ -1,0 +1,12 @@
+// the style will be applied to all pages
+.js-header-wrapper > header {
+  background-color: lightseagreen;
+}
+
+
+.fix-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 10000002;
+}
