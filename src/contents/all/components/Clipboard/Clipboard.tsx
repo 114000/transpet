@@ -1,24 +1,32 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useEffect, useState, useCallback } from 'react'
 
 export interface IClipboardProps {}
 export const Clipboard: FC<IClipboardProps> = (
 
 ) => {
 
-  const [cliplist, setCliplist] = useState([])
+  const [cliplist, setCliplist] = useState<string[]>([])
 
-  useEffect(() => {
+  const updateClipdata = useCallback(() => {
     chrome.storage.local.get('clipboardList', ({ clipboardList }) => {
       console.log('????')
       setCliplist(clipboardList)
     })
-  }, [])
+  }, [setCliplist])
+
+  useEffect(() => {
+
+    updateClipdata()
+    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+      // console.log(sender.tab ?"from a content script:" + sender.tab.url :"from the extension");
+        sendResponse('我收到了你的消息！')
+        console.log('background message', request)
+        updateClipdata()
+    })
+  }, [updateClipdata])
 
   return (
     <div>
-
-      123123
-
       { cliplist.map((str, i) => (
         <div key={i}>{str}</div>
       ))}
