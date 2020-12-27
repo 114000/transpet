@@ -42,6 +42,7 @@
         ]
     },
     "dependencies": {
+        "@coloration/kit": "^1.4.0",
         "@hot-loader/react-dom": "^16.13.0",
         "antd": "^4.4.2",
         "jquery": "^3.5.1",

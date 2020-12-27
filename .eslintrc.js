@@ -67,7 +67,8 @@ module.exports = {
         'unicorn/no-process-exit': OFF,
         'unicorn/prevent-abbreviations': OFF,
         'unicorn/no-abusive-eslint-disable': OFF,
-
+        'unicorn/no-null': OFF,
+        'unicorn/no-for-loop': OFF,
         '@typescript-eslint/explicit-function-return-type': OFF,
         '@typescript-eslint/explicit-module-boundary-types': OFF,
         '@typescript-eslint/no-explicit-any': OFF,
@@ -82,6 +83,10 @@ module.exports = {
         'no-underscore-dangle': OFF,
         'no-unused-expressions': OFF,
         'no-useless-constructor': OFF,
+        'no-prototype-builtins': OFF,
+        'no-plusplus': OFF,
+        'no-useless-return': OFF,
+        'promise/always-return': OFF
     },
     overrides: [
         {
