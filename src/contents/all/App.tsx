@@ -14,6 +14,7 @@ function App () {
     <div className="app">
       <button type="button" className="fix-button" onClick={toggleActive}>TP</button>
       <Playground active={active} />
+
     </div>
   );
 };
